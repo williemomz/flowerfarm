@@ -1,0 +1,331 @@
+html {
+    font-family: "SF Pro Text";
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.main {
+    background-image: url("../assets/bg-2.png");
+    width: 375px;
+    height: 667px;
+    margin: auto;
+}
+
+.flex-row-center {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    padding: 20px 0px;
+}
+
+header a {
+    margin-left: 18px;
+    margin-right: auto;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    margin-right: auto;
+}
+
+.formContainer {
+    margin: 0 16px;
+    width: 342px;
+    height: 362px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 24px -10px rgba(0,0,0,0.4);
+}
+
+#wrapper .tabHead {
+    background: #f0f0f0;
+    height: 34px;
+    border-radius: 10px 10px 0 0;
+}
+
+#wrapper .tabHead button {
+    width: calc(100%/3);
+    height: 100%;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-size: 14px;
+    color: #24FE41;
+    text-align: center;
+    padding-top: 8px;
+}
+
+#wrapper .tabHead button:hover {
+    color: #24FE41;
+    background-color: #ffffff;
+    border: 1px solid #24FE41;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.formContainer form{
+    font-size: 12px;
+    color: #707070;
+}
+
+.mr-14 {
+    margin-right: 14px;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+.mr-40 {
+    margin-right: 40px;
+}
+
+.mr-60 {
+    margin-right: 60px;
+}
+
+.mainForm .row{
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-left: 16px;
+}
+
+.mainForm .row h3{
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 0px;
+}
+
+/* custom properties (AKA css variables) */
+.si {
+    --color-label: #707070;
+    --color-default: #24FE41;
+    --color-active: #00CE1B;
+    --rotate-default: 180deg;
+    --rotate-active: 40deg;
+    --border-size-checkmark: 2px;
+    --border-size-box: 1px;
+    --input-size: 20px;
+    --guter: 30px;
+}
+
+/* basic reset */
+.si,
+.si *,
+.si *::before,
+.si *::after {
+    box-sizing: border-box;
+}
+
+/* label */
+.si {
+    cursor: pointer;
+    position: relative;
+}
+
+.si .si-label {
+    display: inline-block;
+    padding-left: var(--guter);
+    color: var(--color-label);
+    vertical-align: text-top;
+}
+
+.si > input { display: none; }
+
+.si > input[type="checkbox"] {
+    clip-path: polygon(0 0);
+}
+
+/* change property values smoothly */
+.si .si-label::before,
+.si .si-label::after {
+    transition: all 0.2s ease-in-out;
+}
+
+/* an element for both checkbox and radio */
+.si .si-label::before {
+    content: '';
+    display: block;
+    width: var(--input-size);
+    height: var(--input-size);
+    border: var(--border-size-box) solid var(--color-default);
+    position: absolute;
+    top: -3px;
+    left: 0;
+    transform: rotate(0deg) scale(1);
+}
+
+/* feedback when the user interacts with an element */
+.si .si-label:hover::before {
+    border-color: var(--color-active);
+}
+
+/* checkbox square */
+.si.si-checkbox .si-label::before {
+    border-radius: var(--border-size-checkmark);
+}
+
+/* checkbox checkmark */
+.si.si-checkbox .si-label::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 18px;
+    border-width: 0 var(--border-size-checkmark) var(--border-size-checkmark) 0;
+    border-style: solid;
+    border-color: transparent var(--color-active) var(--color-active) transparent;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    transform: rotate(var(--rotate-default)) scale(0);
+}
+
+/* checkbox square */
+.si.si-checkbox > input:checked + .si-label::before {
+    transform: rotate(var(--rotate-active)) scale(0);
+}
+
+/* checkmark */
+.si.si-checkbox > input:checked + .si-label::after {
+    left: 8px;
+    transform: rotate(var(--rotate-active)) scale(1);
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    width: 84px;
+    margin-right: 16px;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #24FE41;
+    box-shadow: 0px 0px 10px -4px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #24FE41 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #24FE41 transparent;
+    top: 7px;
+}
+
+/* style the items (options) */
+.select-items div{
+    color: #707070;
+    padding: 8px 16px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    width: 342px; margin:46px 18px 0px;
+}
+
+footer div:first-of-type{
+    width: 100%;
+}
+
+footer prev{
+    color: #24FE41;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+footer next{
+    color: #24FE41;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+footer button{
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: white;
+    color: #24FE41;
+    font-size: 12px;
+    border: 1px solid #24FE41;
+    outline: none;
+    padding: 6px 18px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px -4px rgba(0,0,0,0.4);
+}
+
+footer button:hover{
+    color: #ffffff;
+    background-color: #24FE41;
+    box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.4);
+}
+
+footer div:last-of-type{
+    margin-top: 40px;
+}
+
+footer div:last-of-type pagination{
+    font-size: 12px;
+    color: #24FE41;
+    justify-content: center;
+}
+
+footer div:last-of-type pagination span{
+    border: 1px solid #24FE41;
+    border-radius: 4px;
+    padding: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+footer div:last-of-type pagination span:hover{
+    color: #ffffff;
+    background-color: #24FE41;
+}
+
+

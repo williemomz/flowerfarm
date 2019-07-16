@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flower entry</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main">
+    <header>
+        <div class="flex-row-center">
+            <a href=""><img src="assets/logo.png" height="16px;" alt="logo"></a>
+                <h1>flower06</h1>
+        </div>
+    </header>
+
+    <div class="formContainer" id="wrapper">
+        <div class="tabHead">
+            <button onclick="showPanel(0)">Top</button>
+            <button onclick="showPanel(1)">Middle</button>
+            <button onclick="showPanel(2)" style="border-top-right-radius: 10px;">Base</button>
+        </div>
+        <form action="">
+            <div class="mainForm" id="topSection">
+                        <div class="row">
+                            <h3>Health:</h3>
+                        </div>
+                        <div class="row">
+                            <label for="waterCheckboxtp" class="si si-checkbox mr-60">
+                                <input type="checkbox" id="waterCheckboxtp"/>
+                                <span class="si-label">Water</span>
+                            </label>
+
+                            <label for="nutCheckboxtp" class="si si-checkbox">
+                                <input type="checkbox" id="nutCheckboxtp"/>
+                                <span class="si-label">Nutrition</span>
+                            </label>
+                        </div>
+
+                        <div class="row">
+                            <h3>Bugs:</h3>
+                        </div>
+                        <div class="row flex-row-center">
+                            <label class="si si-checkbox mr-16">
+                                <input type="checkbox" checked/>
+                                <span class="si-label">Caterpillars</span>
+                            </label>
+
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">larvae</option>
+                                    <option value="2">adult</option>
+                                </select>
+                            </div>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">< 10</option>
+                                    <option value="2">> 10</option>
+                                    <option value="3">nill</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row flex-row-center">
+                            <label class="si si-checkbox mr-40">
+                                <input type="checkbox"/>
+                                <span class="si-label">Thrips</span>
+                            </label>
+
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">larvae</option>
+                                    <option value="2">adult</option>
+                                </select>
+                            </div>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">< 10</option>
+                                    <option value="2">> 10</option>
+                                    <option value="3">nill</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row flex-row-center">
+                            <label class="si si-checkbox mr-14">
+                                <input type="checkbox"/>
+                                <span class="si-label">Meaty Bugs</span>
+                            </label>
+
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">larvae</option>
+                                    <option value="2">adult</option>
+                                </select>
+                            </div>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">< 10</option>
+                                    <option value="2">> 10</option>
+                                    <option value="3">nill</option>
+                                </select>
+                            </div>
+                        </div>
+            </div>
+            <div class="mainForm" id="middleSection">
+                        <div class="row">
+                            <h3>Health:</h3>
+                        </div>
+                        <div class="row">
+                            <label for="waterCheckboxmd" class="si si-checkbox mr-60">
+                                <input type="checkbox" id="waterCheckboxmd"/>
+                                <span class="si-label">Water</span>
+                            </label>
+
+                            <label for="nutCheckboxmd" class="si si-checkbox">
+                                <input type="checkbox" id="nutCheckboxmd"/>
+                                <span class="si-label">Nutrition</span>
+                            </label>
+                        </div>
+
+                        <div class="row">
+                            <h3>Bugs:</h3>
+                        </div>
+                        <div class="row flex-row-center">
+                            <label class="si si-checkbox mr-16">
+                                <input type="checkbox"/>
+                                <span class="si-label">Caterpillars</span>
+                            </label>
+
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">larvae</option>
+                                    <option value="2">adult</option>
+                                </select>
+                            </div>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">< 10</option>
+                                    <option value="2">> 10</option>
+                                    <option value="3">nill</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row flex-row-center">
+                            <label class="si si-checkbox mr-40">
+                                <input type="checkbox" checked/>
+                                <span class="si-label">Thrips</span>
+                            </label>
+
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">larvae</option>
+                                    <option value="2">adult</option>
+                                </select>
+                            </div>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">< 10</option>
+                                    <option value="2">> 10</option>
+                                    <option value="3">nill</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row flex-row-center">
+                            <label class="si si-checkbox mr-14">
+                                <input type="checkbox"/>
+                                <span class="si-label">Meaty Bugs</span>
+                            </label>
+
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">larvae</option>
+                                    <option value="2">adult</option>
+                                </select>
+                            </div>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">< 10</option>
+                                    <option value="2">> 10</option>
+                                    <option value="3">nill</option>
+                                </select>
+                            </div>
+                        </div>
+            </div>
+            <div class="mainForm" id="baseSection">
+                        <div class="row">
+                            <h3>Health:</h3>
+                        </div>
+                        <div class="row">
+                            <label for="waterCheckboxbs" class="si si-checkbox mr-60">
+                                <input type="checkbox" id="waterCheckboxbs"/>
+                                <span class="si-label">Water</span>
+                            </label>
+
+                            <label for="nutCheckboxbs" class="si si-checkbox">
+                                <input type="checkbox" id="nutCheckboxbs"/>
+                                <span class="si-label">Nutrition</span>
+                            </label>
+                        </div>
+
+                        <div class="row">
+                            <h3>Bugs:</h3>
+                        </div>
+                        <div class="row flex-row-center">
+                            <label class="si si-checkbox mr-16">
+                                <input type="checkbox"/>
+                                <span class="si-label">Caterpillars</span>
+                            </label>
+
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">larvae</option>
+                                    <option value="2">adult</option>
+                                </select>
+                            </div>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">< 10</option>
+                                    <option value="2">> 10</option>
+                                    <option value="3">nill</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row flex-row-center">
+                            <label class="si si-checkbox mr-40">
+                                <input type="checkbox"/>
+                                <span class="si-label">Thrips</span>
+                            </label>
+
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">larvae</option>
+                                    <option value="2">adult</option>
+                                </select>
+                            </div>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">< 10</option>
+                                    <option value="2">> 10</option>
+                                    <option value="3">nill</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row flex-row-center">
+                            <label class="si si-checkbox mr-14">
+                                <input type="checkbox" checked/>
+                                <span class="si-label">Meaty Bugs</span>
+                            </label>
+
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">larvae</option>
+                                    <option value="2">adult</option>
+                                </select>
+                            </div>
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">choose:</option>
+                                    <option value="1">< 10</option>
+                                    <option value="2">> 10</option>
+                                    <option value="3">nill</option>
+                                </select>
+                            </div>
+                        </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="row flex-row-center">
+            <prev><</prev>
+                <button type="button">save</button>
+            <next>></next>
+        </div>
+
+        <div class="row">
+            <pagination class="flex-row-center">
+                <span>01</span>
+                <span>02</span>
+                <span>04</span>
+                <span>05</span>
+                <span>06</span>
+                <span>07</span>
+                <span>08</span>
+                <span>09</span>
+                <span>10</span>
+            </pagination>
+        </div>
+    </footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
